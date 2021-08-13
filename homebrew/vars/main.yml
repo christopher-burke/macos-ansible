@@ -70,18 +70,28 @@ brew_cask_packages:
   - font-tinos-nerd-font
 
 brew_packages:
+  - python
+  - pyenv
+  - ack
+  - ag
+  - ansible
   - autoconf
   - bash-completion
   - boot2docker
   - consul
   - docker-compose
   - docker-machine
+  - dockutil
   - doxygen
+  - fd
+  - ffind
+  - fpp
   - git
   - git-lfs
   - go
   - jq
   - nmap
+  - node
   - nomad
   - openssl
   - packer
@@ -96,7 +106,10 @@ brew_packages:
   - tmux
   - tree
   - vault
+  - watchman
   - wget
+  - yarn
+  - z
   - zsh
   - zsh-syntax-highlighting
 

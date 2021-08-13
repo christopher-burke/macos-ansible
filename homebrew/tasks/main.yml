@@ -2,39 +2,25 @@
 - name: Updating Homebrew
   homebrew:
     update_homebrew: true
-  when: homebrew_check.stat.exists
-
-- name: Homebrew tap casks
-  homebrew_tap:
-    name: "{{ brew_taps }}"
-  register: result
-  until: result is successful
 
 - name: Upgrading Homebrew Packages
   homebrew:
-    upgrade_all: "{{ upgrade_homebrew_packages }}"
+    upgrade_all: true
   register: result
-  until: result is successful
-  when: homebrew_check.stat.exists
-
-- name: Installing Homebrew Cask Packages
-  homebrew_cask:
-    name: "{{ brew_cask_packages }}"
-    state: present
-  retries: 2
-  delay: 5
-  register: result
-  until: result.rc == 0
-  notify:
-    - Clear homebrew cache
-  # register: result
-  # until: result is successful
-  # when: homebrew_check.stat.exists and false
+  
+- name: Ensure Homebrew taps are tapped.
+  homebrew_tap:
+    name: "{{ item }}"
+  loop: "{{ brew_taps }}"
 
 - name: Installing Homebrew Packages
   homebrew:
     name: "{{ brew_packages }}"
     state: present
   register: result
-  until: result is successful
-  when: homebrew_check.stat.exists
+    
+- name: Install Cask Applications
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ brew_cask_packages }}"

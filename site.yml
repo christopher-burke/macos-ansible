@@ -6,12 +6,12 @@
     install_homebrew_if_missing: false
     upgrade_homebrew_packages: false
   pre_tasks:
-    - name: Ensuring Homebrew Is Installed
+    - name: Ensuring Homebrew Is Installed [homebrew_check]
       stat:
         path: /usr/local/bin/brew
       register: homebrew_check
 
-    - name: Fail If Homebrew Is Not Installed and install_homebrew_if_missing Is False
+    - name: Stop if Homebrew is missing
       fail:
         msg: Homebrew is missing...Install from http://brew.sh/
       when:

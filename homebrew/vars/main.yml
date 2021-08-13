@@ -5,30 +5,66 @@ brew_taps:
 
 brew_cask_packages:
   - atom
+  - chromedriver
   - docker
   - firefox
   - google-chrome
   - google-drive
-  - yakyak
   - iterm2
   - keepassx
   - kodi
   - lastpass
   - macvim
+  - powershell
+  - qlcolorcode
+  - qlimagesize
+  - qlmarkdown
+  - qlprettypatch
+  - qlstephen
+  - qlvideo
+  - quicklook-csv
+  - quicklook-json
   - royal-tsx
   - skype
   - slack
   - sling
   - spotify
   - sublime-text
+  - suspicious-package
   - virtualbox
   - virtualbox-extension-pack
   - visual-studio-code
-  - vmware-fusion
   - visual-studio-code-insiders
-  - chromedriver
-  - font-meslo-lg-nerd-font
+  - vmware-fusion
+  - webpquicklook
+  - yakyak
+  - font-3270-nerd-font
+  - font-anonymice-nerd-font
   - font-awesome-terminal-fonts
+  - font-caskaydia-cove-nerd-font
+  - font-cousine-nerd-font
+  - font-fira-code-nerd-font
+  - font-go-mono-nerd-font
+  - font-hack-nerd-font
+  - font-hasklug-nerd-font
+  - font-hurmit-nerd-font
+  - font-im-writing-nerd-font
+  - font-inconsolata-nerd-font
+  - font-iosevka-nerd-font
+  - font-lekton-nerd-font
+  - font-meslo-lg-nerd-font
+  - font-monofur-nerd-font
+  - font-monoid-nerd-font
+  - font-mononoki-nerd-font
+  - font-mplus-nerd-font
+  - font-noto-nerd-font
+  - font-overpass-nerd-font
+  - font-profont-nerd-font
+  - font-sauce-code-pro-nerd-font
+  - font-tinos-nerd-font
+
+
+
 
 brew_packages:
   - autoconf
